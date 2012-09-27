@@ -6,9 +6,9 @@ twitter API
 A Text-based API that follows the structure outlined in R.L Stiens "Give Yourself Goosebumps" Novels
 
 At every point in the game, users will be faced with a series of choices that will move themselves (or a group), in a unique direction.
-In order to progress the game to the next decision, the user includes one (and only one) of the highlighted keyword choice identifiers into a tweet.
+In order to progress the game onto the next decision, the user includes one (and only one) of the highlighted keyword choice identifiers into a tweet.
 Users are able to access each game by attributing a specific hashtag to their tweets, 
-which will then be searched for specific keywords to further the progession of the adventure.
+which will then be searched for specific keywords to further the progression of the adventure.
 
 
 Example:
