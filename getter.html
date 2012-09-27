@@ -1,0 +1,175 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript Twitter</title>
+<!-- Source File -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css">
+<style type="text/css">
+
+#container{ width:800px;
+			font-family:lucida console;
+			padding-left:100px;
+			float:left;
+			}
+
+#text1{	width:517px;
+		height:100px;
+	
+		Font-family:Lucida Console;
+		padding-top:px;
+		}
+		
+#text2feel{	display:none;
+			width:517px;
+			height:100px;
+			Font-family:Lucida Console;}
+
+#text2light{	display:none;
+				width:517px;
+				height:100px;
+				Font-family:Lucida Console;}	
+		
+#text3gauze{	display:none;
+				width:517px;
+				height:100px;
+				Font-family:Lucida Console;}					
+		
+b {color:blue;}
+
+b:hover{color:pink;}
+
+#search-box {	width:517px;
+	;
+}
+#results {	width:517px;
+}
+#results p {	border-bottom: 1px solid #EEE;
+				padding: 8px 0;
+}
+#results p:hover {	background-color:#EEE;
+					cursor:pointer;
+}
+
+#extraDiv2 {
+						background-image: url(goose.gif);
+						background-position: center;
+						background-repeat:no-repeat;
+						height: 420px;
+						width: 517px;
+						position: fxed;
+						margin:auto;
+						top: 0px;
+						float:left
+						}		
+						
+#gpines {
+						background-image: url(gspines.jpeg);
+						
+						background-repeat:no-repeat;
+						height: 1137px;
+						width: 997px;
+						position: fxed;
+						margin:auto;
+						top: 0px;
+						flat:left}								
+						
+						
+</style>
+</head>
+<body>
+
+<div id="extraDiv2"></div>
+<div id="container">
+
+<div id="text1">
+<ul>
+<p>You are lost in a dark passage.</p>
+<li id="feel">-<b>Feel</b> around for an opening in the walls</li>
+<li id="match">-<b>Light</b> your last match</li>
+
+</ul>
+</div>
+
+<div id="text2feel">
+<ul>
+<p>You cut your hand on something jagged.</p>
+<li id="feel">-<b>Spit</b> on it and carry on</li>
+<li id="match">-Grab a piece of <b>gauze</b> you feel with your foot</li>
+</ul>
+</div>
+
+<div id="text2light">
+<ul>
+<p>You light the match, leaving you momentarily blinded.<br>
+You are able to open your eyes again just long enough<br> to see a mummy wielding a club made of human teeth.<br>
+you have awoken the mad mummy.<br> You tremble as he clubs in your brains.
+ </p>
+
+</ul>
+</div>
+
+
+<div id="text3gauze">
+
+<p>Your pulling of the gauze only served to awake the mad mummy. Your hand is still cut. But now so is your face. You are dead.</p>
+
+</div>
+
+
+
+<div id="search-box">
+  <input type="text" id="query" />
+  <button>search</button>
+  <br />
+</div>
+
+<div id="results"> </div>
+<div id="gspines"></div>
+
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+		
+var url='http://search.twitter.com/search.json?callback=?&count=1&q=';
+var query;
+	$('button').click(function(){
+	
+		$("#results").empty();
+		
+		query=$("#query").val(query);
+		console.log(url+query);
+		
+		$.getJSON(url+query,function(json){
+		 
+			$.each(json.results,function(i,tweet){
+			
+				
+				console.log(tweet);
+				
+				
+				if(query === 'feel'){
+						$('#text2feel').show();
+						$('#text1').hide();}
+				
+				if(query === 'light'){
+						$('#text2light').show();
+						$('#text2feel').hide();
+						$('#text1').hide();}
+			
+				
+				
+			   $("#results").append('<p><img src="'+tweet.profile_image_url+'" widt="48" height="48" />'+tweet.text+'<span>create '+tweet.created_at+'create '+tweet.from_user+'create '+tweet.geo+'create '+tweet.location+'source '+tweet.source+' create '+tweet.text+'</span></p>');
+			
+			
+			});
+		});
+	});
+});
+
+
+</script>
+</body>
+</html>
