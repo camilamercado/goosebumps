@@ -30,5 +30,5 @@ Having now a tweet with the correct hashtag to parse through, the program can ac
 	-GRAB some gauze you feel under your feet
 	-WALLOW in despair
 
-Having now been brought back to a similar decision making situation the process continues until either- the user chooses the wrong choice and dies
+Having now been brought back to a similar decision making situation the process continues until either- the user chooses the wrong choice and dies,
 or the user runs through the entire string of choices without committing a fatal error, and can win the game.
