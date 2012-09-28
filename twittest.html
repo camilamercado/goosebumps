@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+<script>
+
+	if(localStorage.twitterSearch){
+
+		var twitterData = JSON.parse(localStorage.twitterSearch),
+		 	formattedData = [];
+		
+		$.each(twitterData.results, function(index, tweet){
+		//console.log('index: ', index, 'tweet: ', tweet);
+		console.log(tweet);
+		
+				var text = tweet.text;
+					
+					if(tweet.entities){
+					if(tweet.entities.urls){
+						$.each(tweet.entities.urls, function(i, url){
+							text = text.replace(url.url, '<a href="' + url.expanded_url + '">' + url.display_url + '</a>');
+						});
+					}	
+			
+				}
+			
+			formattedData.push({
+				text: tweet.text,
+				from_user_name: tweet.from_user_name
+				
+				});
+		
+		});
+		
+		localStorage.formattedData = JSON.stringify(formattedData);
+		
+		console.log ('hooray');
+		console.log('the list of text: ', formattedData);
+		
+		
+		console.log(twitterData)
+		
+		$.each(localStorage.twitterSearch, function(index, tweet){
+			//console.log('index: ', index, 'tweet: ', tweet);
+			
+		
+		});
+
+	} else {
+
+		$.ajax({
+		
+			url: 'http://search.twitter.com/search.json?callback=?&count=1&q=feel',
+			dataType:'jsonp',
+			
+			success:function(response){
+				localStorage.twitterSearch = JSON.stringify(response);
+				console.log('working');
+
+				},			
+			error: function(error){
+				alert(error);
+			}
+			
+			
+		});
+	
+	}
+</script>
+<script>
+
+//https://dev.twitter.com/docs/api/1/get/search
+//test to see if we have data
+//url from twitter data
+//parse data for specific desired content
+//store data into DOM
+
+
+
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<h1>he</h1>
+<h2>wer?</h2>
+
+</body>
+
+</html>
