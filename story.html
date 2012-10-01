@@ -1,0 +1,66 @@
+<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script> 
+
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+	
+		
+	
+	
+	var story = [{
+		"story":"You are lost in a dark passage...",
+		"choices":{
+			"opt1":{"step":"2","search":"feel"},
+			"opt2":{"step":"3","search":"light"},
+		}
+	},
+	{
+		"story":"You cut your hand on something jagged.",
+		"choices":{
+			"opt1":{"step":"4","search":"asdf"},
+			"opt2":{"step":"5","search":"jkl"},
+		}
+	}];
+
+
+	console.log(story[0].choices);
+	var step = story[0].story;
+	var choice1label = story[0].choices.opt1.search;
+	var choice1step = story[0].choices.opt1.search;
+	var choice2label = story[0].choices.opt2.search;
+	var choice2step = story[0].choices.opt2.search;
+	$("#story").html(step);
+	$("#option1").html(choice1label);
+	$("#option2").html(choice2label);
+
+
+	
+	$("#option1").click(function(){
+		
+		 step = story[currentStep].story;
+	
+		$("#story").html(step);
+		$("#option1").html(choice1);
+		$("#option2").html(choice2);
+	});
+	
+	$("#option2").click(function(){
+		
+		 step = story[currentStep].story;
+	
+		$("#story").html(step);
+		$("#option1").html(choice1);
+		$("#option2").html(choice2);
+	});	
+
+});
+
+
+</script>
+
+
+<h1 id="story"></h1>
+<h2 id="option1"></h2>
+<h2 id="option2"></h2>
