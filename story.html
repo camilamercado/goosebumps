@@ -28,21 +28,482 @@ $(document).ready(function(){
 
 	var story = {
 
-		page_1: {
-			url: 'http://',
-			decisions: [
+		page_3: {
+			url: 'http://camilamercado.com/GooseBumps1/003.htm',
+			content: [
 				{
-					page:11,
-					name:'somethign'
+					page:16,*
+					name:'YoYo'
 				}, 
 				{
-					name: 'YoYo', 
-					page: 16
+					page:101,*
+					name:'Cellar'
 				}
 			]
 		},
 
-		page_17: {}
+		page_16: {
+			url: 'http://camilamercado.com/GooseBumps1/016.htm',
+			decisions: [
+				{
+					page:64,*
+					name:'Follow'
+				}, 
+				{
+					page:44,*
+					name:'Stay'
+				}
+			]
+		},
+
+		page_101: {
+			url: 'http://camilamercado.com/GooseBumps1/101.htm',
+			content: [
+				{
+					page:1,
+					name:'Start Over'
+				}
+			]
+		},
+
+
+		page_64: {
+			url: 'http://camilamercado.com/GooseBumps1/064.htm',
+			decisions: [
+				{
+					page:24,*
+					name:'Farmhouse'
+				}, 
+				{
+					page:106,*
+					name:'Running'
+				}
+			]
+		},
+
+		page_44: {
+			url: 'http://camilamercado.com/GooseBumps1/044.htm',
+			decisions: [
+				{
+					page:26,*
+					name:'Keep-Running'
+				}, 
+				{
+					page:109,*
+					name:'Couple'
+				}
+			]
+		},
+
+		page_24: {
+			url: 'http://http://camilamercado.com/GooseBumps1/024.htm',
+			decisions: [
+				{
+					page:98,*
+					name:'Animals'
+				}, 
+				{
+					page:30,*
+					name:'Not'
+				}
+			]
+		},
+
+		page_106: {
+			url: 'http://http://camilamercado.com/GooseBumps1/106.htm',
+			decisions: [
+				
+				{
+					page:106,
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_26: {
+			url: 'http://camilamercado.com/GooseBumps1/026.htm',
+			decisions: [
+				{
+					page:80,*
+					name:'Storehouse'
+				}, 
+				{
+					page:129,*
+					name:'Wendy'
+				}
+			]
+		},
+
+		page_109: {
+			url: 'http://http://camilamercado.com/GooseBumps1/109.htm',
+			decisions: [
+				{
+					page:47,*
+					name:'Keep'
+				}, 
+				{
+					page:89,*
+					name:'Van'
+				}
+			]
+		},
+
+		page_98: {
+			url: 'http://http://camilamercado.com/GooseBumps1/098.htm',
+			decisions: [
+				{
+					page:32,*
+					name:'School'
+				}, 
+				{
+					page:112,*
+					name:'Bus'
+				}
+			]
+		},
+
+		page_30: {
+			url: 'http://http://camilamercado.com/GooseBumps1/030.htm',
+			decisions: [
+				{
+					page:39,*
+					name:'Cross'
+				}, 
+				{
+					page:96,*
+					name:'Other'
+				}
+			]
+		},
+
+		page_80: {
+			url: 'http://http://camilamercado.com/GooseBumps1/080.htm',
+			decisions: [
+				{
+					page:75,*
+					name:'Rope'
+				}, 
+				{
+					page:31,*
+					name:'Means'
+				}
+			]
+		},
+
+		page_129: {
+			url: 'http://http://camilamercado.com/GooseBumps1/129.htm',
+			decisions: [
+				{
+					page:71,*
+					name:'Shelter'
+				}, 
+				{
+					page:45,*
+					name:'Going'
+				}
+			]
+		},
+
+		page_47: {
+			url: 'http://http://camilamercado.com/GooseBumps1/047.htm',
+			decisions: [
+				{
+					page:6,*
+					name:'Accept'
+				}, 
+				{
+					page:124,*
+					name:'Dont'
+				}
+			]
+		},
+
+		page_89: {
+			url: 'http://http://camilamercado.com/GooseBumps1/089.htm',
+			decisions: [
+				{
+					page:25,*
+					name:'Break'
+				}, 
+				{
+					page:102,*
+					name:'Speed'
+				}
+			]
+		},
+
+		page_32: {
+			url: 'http://http://camilamercado.com/GooseBumps1/032.htm',
+			decisions: [
+				{
+					page:57,*
+					name:'Free'
+				}, 
+				{
+					page:119,*
+					name:'Reason'
+				}
+			]
+		},
+
+		page_112: {
+			url: 'http://http://camilamercado.com/GooseBumps1/112.htm',
+			decisions: [
+				{
+					page:39,*
+					name:'Cross'
+				}, 
+				{
+					page:96,*
+					name:'Other'
+				}
+			]
+		},
+
+		page_39: {
+			url: 'http://http://camilamercado.com/GooseBumps1/039.htm',
+			decisions: [
+				{
+					page:37,*
+					name:'Stay-put'
+				}, 
+				{
+					page:67,*
+					name:'Leave'
+				}
+			]
+		},
+
+		page_96: {
+			url: 'http://http://camilamercado.com/GooseBumps1/096.htm',
+			decisions: [
+				
+				{
+					page:133,*
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_75: {
+			url: 'http://http://camilamercado.com/GooseBumps1/075.htm',
+			decisions: [
+				
+				{
+					page:20,*
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_31: {
+			url: 'http://http://camilamercado.com/GooseBumps1/031.htm',
+			decisions: [
+				
+				{
+					page:11,*
+					name:'Game Over Win'
+				}
+			]
+		},
+
+
+		page_71: {
+			url: 'http://http://camilamercado.com/GooseBumps1/071.htm',
+			decisions: [
+				{
+					page:69,*
+					name:'Carpet'
+				}, 
+				{
+					page:50,*
+					name:'Out'
+				}
+			]
+		},
+
+		page_45: {
+			url: 'http://http://camilamercado.com/GooseBumps1/045.htm',
+			decisions: [
+				{
+					page:97,
+					name:'Trailer'
+				}, 
+				{
+					page:55,
+					name:'Cave'
+				}
+			]
+		},
+
+		page_6: {
+			url: 'http://http://camilamercado.com/GooseBumps1/006.htm',
+			decisions: [
+				
+				{
+					page:110,
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_124: {
+			url: 'http://http://camilamercado.com/GooseBumps1/124.htm',
+			decisions: [
+				
+				{
+					page:124,
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_25: {
+			url: 'http://http://camilamercado.com/GooseBumps1/025.htm',
+			decisions: [
+				
+				{
+					page:25,
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_102: {
+			url: 'http://http://camilamercado.com/GooseBumps1/102.htm',
+			decisions: [
+				{
+					page:40,
+					name:'Experiment'
+				}, 
+				{
+					page:99,
+					name:'Free'
+				}
+			]
+		},
+
+		page_57: {
+			url: 'http://http://camilamercado.com/GooseBumps1/057.htm',
+			decisions: [
+				
+				{
+					page:57,
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_119: {
+			url: 'http://http://camilamercado.com/GooseBumps1/119.htm',
+			decisions: [
+				
+				{
+					page:119,
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_39: {
+			url: 'http://http://camilamercado.com/GooseBumps1/039.htm',
+			decisions: [
+				{
+					page:37,
+					name:'Stay-put'
+				}, 
+				{
+					page:67,
+					name:'Leave'
+				}
+			]
+		},
+
+		page_96: {
+			url: 'http://http://camilamercado.com/GooseBumps1/096.htm',
+			decisions: [
+				
+				{
+					page:133,
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_37: {
+			url: 'http://http://camilamercado.com/GooseBumps1/037.htm',
+			decisions: [
+				{
+					page:37,
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_67: {
+			url: 'http://http://camilamercado.com/GooseBumps1/067.htm',
+			decisions: [
+				{
+					page:49,
+					name:'Rescue'
+				}, 
+				{
+					page:68,
+					name:'Help'
+				}
+			]
+		},
+
+		page_69: {
+			url: 'http://http://camilamercado.com/GooseBumps1/069.htm',
+			decisions: [
+				
+				{
+					page:69,
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_50: {
+			url: 'http://http://camilamercado.com/GooseBumps1/050.htm',
+			decisions: [
+				
+				{
+					page:10,
+					name:'Game Over Bad'
+				}
+			]
+		},
+
+		page_97: {
+			url: 'http://http://camilamercado.com/GooseBumps1/097.htm',
+			decisions: [
+				{
+					page:13,
+					name:'Ethel'
+				}, 
+				{
+					page:103,
+					name:'Escape'
+				}
+			]
+		},
+
+		page_55: {
+			url: 'http://http://camilamercado.com/GooseBumps1/055.htm',
+			decisions: [
+				
+				{
+					page:91,
+					name:'Boulder'
+				}, 
+				{
+					page:113,
+					name:'Continue'
+				}
+			]
+		},
 
 	}
 
