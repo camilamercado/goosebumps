@@ -1,15 +1,14 @@
 goosebumps
 ==========
 
-twitter API
+API TwitterBot
 
 A Text-based API that follows the structure outlined in R.L Stiens "Give Yourself Goosebumps" Novels
 
-At every point in the game, users will be faced with a series of choices that will move themselves (or a group), in a unique direction.
+The GooseBumps TwitterBot is programmed to repsond to mesages including #Goosebumps. 
+Specific words within the tweets will prompt the Twitterbot to respond with decisions that allow the user to navigate the structure of the game. 
+These decisions will be indicated by two highlighted words. 
 In order to progress the game onto the next decision, the user includes one (and only one) of the highlighted keyword choice identifiers into a tweet.
-Users are able to access each game by attributing a specific hashtag to their tweets, 
-which will then be searched for specific keywords to further the progression of the adventure.
-
 
 Example:
 
@@ -19,9 +18,9 @@ Example:
 	-LIGHT your last match
 	-WALLOW in despair
 
-At this point, the user makes a tweet with the specific #identifier (ex:#MadMummy01)
+At this point, the user makes a tweet with the specific #identifier (ex:#GooseBumps)
 
-	ElBarto: Feel? #MadMummy01
+	ElBarto: Feel? #Goosebumps
 	
 Having now a tweet with the correct hashtag to parse through, the program can acknowledge which choice has been used. (FEEL)
 
