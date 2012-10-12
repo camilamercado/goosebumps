@@ -1,0 +1,71 @@
+
+
+
+
+
+.text-container {	background-color: black;
+					width: 600px;
+					height: 900px;
+					float: left;
+					
+				}
+
+.main-container { padding-top: 150px;
+				  padding-left: 150px;
+				  margin: auto;
+				  width: 1370;
+				  height: 900px;}
+
+.story  {	color: white;
+			padding-top: 430px;
+		
+			margin-left: 50px;
+			margin-right: 50px;
+			margin-bottom: 20px;
+			font-size: 1.1em;
+			font-family: "Lucida Console", Monaco, monospace;
+		}
+#header	{	background-image: url(goose.gif);
+			width: 600px;
+			height: 440px;
+			z-index:z;}
+
+
+
+a 		{    color:#66CC00;
+			 font-size: 1.1em;
+			 font-family: "Lucida Console", Monaco, monospace;
+			 }
+
+a:hover {    color:#FF0066;}
+
+.book-spines {    float: left;
+				  width: 217px;
+				  height: 900px;
+				  }
+
+#b-s1	{    background-image: url(gspine1.gif);
+			 width: 163px;
+			 height: 900px;
+			float: left;}
+
+#b-s2	{    background-image: url(gspine2.gif);
+			 width: 217px;
+			 height: 900px;
+			float: left;}
+
+#b-s3	{    background-image: url(gspine3.gif);
+			 width: 86px;
+			 height: 900px;
+			 float: left;
+			 margin-right: 20px;}
+
+#alien	{	 background-image: url(alien.gif);
+			 width: 150px;
+			 height: 164px;
+			 float: left;
+			 margin-left: 20px;
+			 margin-top: 740px;
+			 background-repeat: no-repeat;}	 
+
+
