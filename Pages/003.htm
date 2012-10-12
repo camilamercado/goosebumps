@@ -5,25 +5,72 @@
 <title>003</title>
 <style>
 
-.story  {	width: 800px;
-			margin-top: 25px;
-			margin-left: 25px;
-			margin-bottom: 25px;
-			font-size: 1em;
+#header	{	background-image: url(goose.gif);
+			width: 600px;
+			height: 440px;
+			z-index:z;}
+
+.text-container {	background-color: black;
+					width: 600px;
+					height: 900px;
+					float: left;
+					
+				}
+
+.main-container { padding-top: 150px;
+				  padding-left: 150px;
+				  margin: auto;
+				  width: 1370;
+				  height: 900px;}
+
+.story  {	color: white;
+			padding-top: 430px;
+		
+			margin-left: 50px;
+			margin-right: 50px;
+			margin-bottom: 20px;
+			font-size: 1.1em;
 			font-family: "Lucida Console", Monaco, monospace;
 		}
 
-.choice  {	color: #33CC00;
-			text-indent: 25px;
-			font-size: 1em;
-			font-family: "Lucida Console", Monaco, monospace;
-		 }
 
 
-a 		{color:#66CC00;}
-a:hover {color:#FF0066;}
 
+a 		{    color:#66CC00;
+			 font-size: 1.1em;
+			 font-family: "Lucida Console", Monaco, monospace;
+			 }
 
+a:hover {    color:#FF0066;}
+
+.book-spines {    float: left;
+				  width: 217px;
+				  height: 900px;
+				  }
+
+#b-s1	{    background-image: url(gspine1.gif);
+			 width: 163px;
+			 height: 900px;
+			float: left;}
+
+#b-s2	{    background-image: url(gspine2.gif);
+			 width: 217px;
+			 height: 900px;
+			float: left;}
+
+#b-s3	{    background-image: url(gspine3.gif);
+			 width: 86px;
+			 height: 900px;
+			 float: left;
+			 margin-right: 20px;}
+
+#alien	{	 background-image: url(alien.gif);
+			 width: 150px;
+			 height: 164px;
+			 float: left;
+			 margin-left: 20px;
+			 margin-top: 740px;
+			 background-repeat: no-repeat;}	 
 
 
 </style>
@@ -36,24 +83,53 @@ a:hover {color:#FF0066;}
 
 
 
-<div class="story">"I can't!"you shout back. "Not without Yoyo!"<br>
-Yoyo - your trusty little black dog.<br> 
-Where is he? He usually follows you everywhere.<br> 
+<div class="main-container">
+
+<div ID="b-s2"></div>
+<div ID="b-s3"></div>
+
+
+
+<div class="text-container">
+
+<div ID="header">
+<div class="story">
+
+"I can't!" you shout back."Not without Yoyo!"
+Yoyo - your trusty little black dog. <br>
+Where is he?
+He usually follows you everywhere.
 You turn to go find him, but dust clogs the air. 
-You can barely see! The wind tugs at your clothes. It's hard even to stay on your feet.<br> 
-Uncle Jed's strong hand lands on your shoulder.<br> 
-"Come on, now," he cries in your ear. "There's no time!"<br> 
-But over the fierce howling of the wind, you think you hear a faint noise. Is it...?<br> 
-It is!<br> 
-It's Yoyo's bark!
+You can barely see!<br>
+The wind tugs at your clothes.<br>
+It's hard even to stay on your feet.
+Uncle Jed's strong hand lands on your shoulder.<br>
+"Come on, now," he cries in your ear.<br> 
+"There's no time!"<br>
+But over the fierce howling of the wind, you think you hear a faint noise. Is it...?<br>
+It is!<br>
+It's Yoyo's bark!<br><br>
+
+
+<a href="016.htm">If you go after Yoyo, go to PAGE 16.</a><br>
+<a href="101.htm">If you run into the storm cellar, go to PAGE 101.</a>
+
+</div>
+</div>
 </div>
 
-<div class="choice"><a href="016.htm">If you go after Yoyo, go to PAGE 16.</a></i></div>
+<div ID="b-s1"></div>
+<div ID="alien"></div>
 
-<div class="choice"><a href="101.htm">If you run into the storm cellar, go to PAGE 101.</a></i></div>
+</div>
 
 
 
 </body>
+
+<script src="jquery.js"></script>
+<script>
+
+</script>
 
 </html>
