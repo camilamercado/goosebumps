@@ -1,6 +1,5 @@
 <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script> 
-
-
+<script src="http://underscorejs.org/underscore-min.js"></script>
 <script type="text/javascript">
 
 
@@ -59,9 +58,70 @@ var story = {
 					name:'Running'
 				}
 			]
-		},
-
 		}
 
-		</script>
+		}
+var assertion = "yoyo";
+
+
+	var nextPage = function(story, assertion) {
+
+		var nextPage;
+
+		_.each(story, function(step, key) {
+
+			_.each(step.content, function(content, key) {
+
+				if(content.name.toLowerCase() === assertion.toLowerCase()) {
+					nextPage = 'page_' + content.page;
+				}
+			});
+
+		});
+
+		return nextPage;
+	};
+
+
+	var response = function (nextPage){
+
+		var storyPage = story[nextPage];
+		return storyPage;
+
+	};						
+
+
+	console.log(
+		response(
+			nextPage(story, assertion)
+		)
+	);
+/*
+	var nextPage = nextPage(story, "start over");
+	console.log(nextPage);
+	*/
+
+	//find all of the tweets
+
+		//with each tweet, look at the contents of the tweet
+
+		//look at the phrase, see if it is one of the keys in the next story step
+
+			//if the next story step has been found, repsond to the user with that step's info
+
+			//if the step can't be found, offer choices...
+
+
+
+});
+
+
+
+
+
+
+
+</script>
+
+
 
