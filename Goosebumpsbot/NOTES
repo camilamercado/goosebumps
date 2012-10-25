@@ -1,0 +1,160 @@
+NOTES
+
+Loops
+
+$("#main  form .validate").each(function(){
+	var myinput =$(this);
+	if (myinput.validate()===false){myinput.addClass('error');}
+});
+
+(go to all form elements inside main - class validate - create input based on all forms entering true or false / if false create class error)
+
+-caveat: loops are easy to understand, but are preformance hogs, *can often be avoided
+
+
+Conditions
+
+if ($("#sidebar").hasclass("open")) {do something} else (do something else)
+
+if ($(this).is(button[type="submit"])) {disable button during ajax} 
+
+.is returns true or false
+(type distinguish selector by function (href destination or submit ability))
+
+-caveat: many JS conditionals can be avoided by judicious combinations of selectors
+
+if ($(this).hasClass("active"))
+
+Binding fuctions to listeners
+
+${"#tab > li"}.on("click", function(){
+	$(this).addClass("selected").siblings()removeClass("selected");
+});
+
+*apply to website
+
+Caveat: overuse of "this" can cause complicated scope problems down the road. USE WITH CARE!
+Caveat: too many simultaneous listeners will slow down page responsiveness, so make sure you remove listeners when they are not relavent.
+
+Return function as argument
+
+$("boxes > div").removeClass("open closed hidden").addClass(function(){
+	return $(this).attr('data-defaultstate');
+});
+
+
+Dynamic and Asynchronous functions
+
+
+Preset delays and time loops
+a single delayed event is set by using setTimeout();
+-using a named function: setTimeout(hideNav, 3000);
+(cannot run a function within an argument insidie a timeout ex (setTimeout(hideNav("some string"), 3000);) )-use anon function
+
+-using an anonymous function: set timeout(function(){
+	$("main.navbar").hide();
+	},3000);
+})
+
+-You can cancel a setimeout if you've previously saved it to a variable
+-var barHider = setTimeout(hideNav, 3000);
+clearTimeout(barHider);
+
+
+Similarly, a reccuring loop delay is set up using setinterval() and canceled using clearInterval();
+-setInterval(updateLog, 3000);
+
+-setInterval(function (){
+	var counterBox = $("#main.counterBox");
+	var currentValue = counterBox.text();
+	currentValue = currentValue + 5;
+	counterBox.text(currentValue.toString());
+	},30000;
+});
+
+-var myCounter = setTimeout(countMe, 3000);
+clearInterval(myCounter);
+
+
+server triggered responses
+-a server response is not an event , but you can still attach a callback function to it
+-remember to handle both success and failure responses!
+$.ajax({
+	url:"search twitter blah blah"
+	dataType:'jsonp',
+	success:function(response){
+		localStorage.twitterSearch = JSON.stringify(response);
+		console.log('working');
+	},
+	error:function(){
+
+	}
+})
+
+-framework triggered responses
+these are typically callbacks that run once an animation has completed
+
+-fadeIn(1000, function(){alert("im here");})
+
+User triggered responses
+-most user imputs trigger JaveScript events, which you can tell your code to listen for,
+-in jQuery, listeners are added via:
+$("someSelector").on("click", functionName);
+-remember to remove event listeners as soon as they're no longer needed:
+$("someselector").one("click",functionName);
+
+-Some typical user interaction event listeners
+-click
+-focus/blur
+-mouseover
+-keydown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
