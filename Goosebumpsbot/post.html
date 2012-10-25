@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Post Example</title>
+		<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+		<script src="js/mongoUtil.js"></script>
+		<script>
+
+			$(document).ready(function() {
+				mongoUtil.config({
+					"db":"apiTest",
+					"appID":"heroku_app7564546",
+					"apiKey":"5088cebae4b0d0aee183c26d"
+				});
+
+				//actual code
+				$('#form').submit(function(){
+
+					var data = $(this).find("#entry").val();
+
+					console.log("data to post:", data);
+					mongoUtil.post("entry",data, function(){
+						mongoUtil.get();
+					});
+
+					return false;
+				});
+
+			});
+
+		</script>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+  	</head>
+	<body>
+		<h1>Post Example</h1>
+		<form action="" id="form">
+			<input type="text" id="entry" name="entry" value="" placeholder="data to store"/>
+		</form>
+	</body>
+</html>
