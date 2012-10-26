@@ -1,7 +1,7 @@
 var mongoUtil = {
-	_db: "",
-	_appID:"",
-	_apiKey: "",
+	_db: "goosebumpsbot",
+	_appID:"8737350",
+	_apiKey: "5089c460e4b0d0aee183c5cd",
 	config: function(configuration) {
 
 		for (var key in configuration) {

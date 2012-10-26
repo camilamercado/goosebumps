@@ -57,7 +57,7 @@ function loadNarrative()
   console.log("Narrative loaded.");
   return narrative;*/
 
-  var assertion = "yoyo";
+  var word = "yoyo";
 
 
   var nextPage = function(story, assertion) {
@@ -68,7 +68,7 @@ function loadNarrative()
 
       _.each(step.content, function(content, key) {
 
-        if(content.name.toLowerCase() === assertion.toLowerCase()) {
+        if(content.name.toLowerCase() === word.toLowerCase()) {
           nextPage = 'page_' + content.page;
         }
       });
